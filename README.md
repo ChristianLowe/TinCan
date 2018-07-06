@@ -52,8 +52,7 @@ Licensed under the Open Font License
 http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
 ```
 
-Software
---------
+### Software
 ```
 Copyright (c) 2018 Christian Lowe
 Released under the MIT License
@@ -74,8 +73,7 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-Graphics and Sound Effects
---------------------------
+### Graphics and Sound Effects
 ```
 Copyright (c) 2018 Christian Lowe
 All rights reserved
