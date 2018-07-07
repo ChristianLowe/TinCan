@@ -64,8 +64,10 @@ object Director {
     private fun setupMenu() {
         Audio.playMusic(Audio.MusicTag.MENU)
 
+        val startCan = StartCan()
+
         gameObjects.clear()
-        gameObjects.addAll(listOf(Logo(), ScoreDisplay(), StartCan()))
+        gameObjects.addAll(listOf(Logo(), ScoreDisplay(), startCan, TutorialIcon(startCan)))
     }
 
     private fun startGame() {
