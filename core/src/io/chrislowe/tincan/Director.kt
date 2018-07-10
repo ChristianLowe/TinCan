@@ -67,7 +67,8 @@ object Director {
         val startCan = StartCan()
 
         gameObjects.clear()
-        gameObjects.addAll(listOf(Logo(), ScoreDisplay(), startCan, TutorialIcon(startCan)))
+        gameObjects.addAll(listOf(Logo(), ScoreDisplay(), LeaderboardsButton(), SettingsButton(),
+                startCan, TutorialIcon(startCan)))
     }
 
     private fun startGame() {

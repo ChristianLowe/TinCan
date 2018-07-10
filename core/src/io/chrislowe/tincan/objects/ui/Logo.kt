@@ -10,7 +10,7 @@ import io.chrislowe.tincan.objects.GameObject
 class Logo : GameObject() {
     private val copyrightText = "Software © 2018 Christian Lowe"
     private val copyrightX = 0f
-    private val copyrightY = TinCanGame.gameHeight / 4f
+    private val copyrightY = TinCanGame.gameHeight / 3f
     private val copyrightLabel: Label
 
     init {

@@ -9,20 +9,24 @@ class AndroidStoredData(private val preferences: SharedPreferences) : StoredData
 
         return if (showIconCount == 0) false
         else {
-            with (preferences.edit()) {
-                putInt(tutorialIconKey, showIconCount - 1)
-                apply()
-            }
+            setInt(tutorialIconKey, showIconCount - 1)
             true
         }
     }
 
-    override fun currentHighScore() = preferences.getInt(highScoreKey, 0)
+    override fun getLeaderboardKey(): String = BuildConfig.leaderboardKey
 
-    override fun submitHighScore(newScore: Int) {
-        with (preferences.edit()) {
-            putInt(highScoreKey, newScore)
-            apply()
-        }
+    override fun currentHighScore() = preferences.getInt(highScoreKey, 0)
+    override fun submitHighScore(newScore: Int) = setInt(highScoreKey, newScore)
+
+    override fun getMusicVolume(): Int = preferences.getInt(musicVolumeKey, 5)
+    override fun setMusicVolume(newVolume: Int) = setInt(musicVolumeKey, newVolume)
+
+    override fun getSfxVolume(): Int = preferences.getInt(musicVolumeKey, 5)
+    override fun setSfxVolume(newVolume: Int) = setInt(sfxVolumeKey, newVolume)
+
+    private fun setInt(keyName: String, value: Int) = with(preferences.edit()) {
+        putInt(keyName, value)
+        apply()
     }
 }
